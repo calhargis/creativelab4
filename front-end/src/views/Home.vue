@@ -1,11 +1,18 @@
 <template>
 <div class="home">
+<img class="center" alt="Jacob" src="https://dw3jhbqsbya58.cloudfront.net/rosters/cfeda153-cbfc-46c2-95e1-8aff022efc11/7/f/5/7f53db19-1bb0-e611-8076-a0369f3c18ea/thumbnail.jpg?version=636845464623148690">
+<h1>This is Jacob Fox</h1>
+<p>The man</p>
+<p>The myth</p>
+<p>The legend</p>
+<p>Go to the Admin page to upload your own pictures of the legendary Jacob Fox</p>
   <section class="image-gallery">
     <div class="image" v-for="item in items" :key="item.id">
       <h2>{{item.title}}</h2>
       <img :src="item.path" />
     </div>
   </section>
+
 </div>
 </template>
 
@@ -60,6 +67,7 @@ export default {
 
 .image img {
   width: 100%;
+  margin: auto;
 }
 
 /* Masonry on large screens */
@@ -81,5 +89,23 @@ export default {
   .image-gallery {
     column-count: 2;
   }
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+a {
+  text-align: center;
 }
 </style>

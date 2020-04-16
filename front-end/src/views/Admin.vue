@@ -1,9 +1,8 @@
 <template>
 <div class="admin">
-<h1>The Admin Page!</h1>
+<h1>Submit your own photos and comments about Jacob!</h1>
   <div class="heading">
-    <div class="circle">1</div>
-    <h2>Add an Item</h2>
+    <h2>Add Your Photo of Jacob here</h2>
   </div>
   <div class="add">
     <div class="form">
@@ -12,14 +11,14 @@
       <input type="file" name="photo" @change="fileChanged">
       <button @click="upload">Upload</button>
     </div>
+    <br><br><br>
     <div class="upload" v-if="addItem">
       <h2>{{addItem.title}}</h2>
       <img :src="addItem.path" />
     </div>
   </div>
   <div class="heading">
-      <div class="circle">2</div>
-      <h2>Edit/Delete an Item</h2>
+      <h2>Delete Photos</h2>
     </div>
     <div class="edit">
       <div class="form">
@@ -132,47 +131,37 @@ export default {
 
 <style scoped>
 .image h2 {
-  font-style: italic;
+  text-align: center;
   font-size: 1em;
 }
 
 .heading {
-  display: flex;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: auto;
+  text-align: center;
 }
 
-.heading h2 {
-  margin-top: 8px;
-  margin-left: 10px;
-}
 
 .add,
 .edit {
-  display: flex;
+  margin: auto;
+  text-align: center;
 }
 
-.circle {
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  padding: 8px;
-  background: #333;
-  color: #fff;
-  text-align: center
-}
 
 /* Form */
 input,
 textarea,
 select,
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Arial;
   font-size: 1em;
+  text-align: center;
+  margin: auto;
 }
 
 .form {
-  margin-right: 50px;
+  text-align: center;
+  margin: auto;
 }
 
 /* Uploaded images */
@@ -182,20 +171,37 @@ button {
 
 .upload img {
   max-width: 300px;
+  text-align: center;
+  margin: auto;
 }
 
 /* Suggestions */
 .suggestions {
   width: 200px;
   border: 1px solid #ccc;
+  text-align: center;
+  margin: auto;
 }
 
 .suggestion {
   min-height: 20px;
+  text-align: center;
+  margin: auto;
 }
 
 .suggestion:hover {
   background-color: #5BDEFF;
   color: #fff;
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+text-align: center;
+margin: auto;
 }
 </style>
